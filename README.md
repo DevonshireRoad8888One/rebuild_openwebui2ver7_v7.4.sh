@@ -118,5 +118,75 @@ Would you like me to generate:
 
 Just say the word and I’ll create them immediately.  
 
+
+Hello I just ran the security, devoshireroad777@DESKTOP-G3R5JB2:~$ ~/openwebui2ver7/check-security.sh
+==================================================
+ Open WebUI + OTEL Security Check (v7.4)
+==================================================
+WebUI port 8000:
+State          Recv-Q         Send-Q                  Local Address:Port                   Peer Address:Port         Process
+LISTEN         0              2048                        127.0.0.1:8000                        0.0.0.0:*             users:(("open-webui",pid=843,fd=27))
+Ollama port 11437:
+State          Recv-Q         Send-Q                 Local Address:Port                    Peer Address:Port         Process
+LISTEN         0              4096                       127.0.0.1:11437                        0.0.0.0:*             users:(("ollama",pid=850,fd=4))Permissions:
+drwx------ 7 devoshireroad777 devoshireroad777 4096 Jun 12 02:18 /home/devoshireroad777/openwebui2ver7
+drwx------ 5 devoshireroad777 devoshireroad777 4096 Jun 12 02:19 /home/devoshireroad777/openwebui2ver7/data
+drwx------ 4 devoshireroad777 devoshireroad777 4096 Jun 12 02:18 /home/devoshireroad777/openwebui2ver7/models
+-rw------- 1 devoshireroad777 devoshireroad777 568 Jun 12 02:18 /home/devoshireroad777/openwebui2ver7/.env
+-rw------- 1 devoshireroad777 devoshireroad777  65 Jun 12 02:18 /home/devoshireroad777/openwebui2ver7/.webui_secret_keyService checks:
+ Ollama OK
+ WebUI OKOTEL Config:
+OTEL_EXPORTER_OTLP_ENDPOINT=http://127.0.0.1:4317
+OTEL_METRICS_EXPORT_INTERVAL_MILLIS=10000
+OTEL_EXPORTER_OTLP_INSECURE=true
+OTEL_SERVICE_NAME=open-webui
+ENABLE_OTEL=true
+==================================================
+devoshireroad777@DESKTOP-G3R5JB2:~$
+
+ Excellent! Your security check looks perfect.Summary of the Check:Ports: Both WebUI (8000) and Ollama (11437) are listening only on 127.0.0.1 → Very secure.
+Permissions: All directories are 700 and secret files are 600 → Correct and hardened.
+Services: Both Ollama and Open WebUI are running and responding.
+OTEL: Correctly configured and loaded.
+
+This is exactly what we wanted — a clean, secure, isolated setup.Next RecommendationsSince everything is working great, here are the logical next steps:1. Set up Systemd Service (for auto-start on boot)Run these commands once:bash
+
+sudo tee /etc/systemd/system/openwebui2ver7.service > /dev/null <<'EOF'
+[Unit]
+Description=Open WebUI v7.4 (Port 8000) + Ollama 11437
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=devoshireroad777
+Group=devoshireroad777
+WorkingDirectory=/home/devoshireroad777/openwebui2ver7
+ExecStart=/home/devoshireroad777/openwebui2ver7/start.sh
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now openwebui2ver7.service
+
+# Check status
+sudo systemctl status openwebui2ver7.service
+
+2. For GitHub
+Your repo is now ready. The README.md I gave you last time already has your username (DevonshireRoad8888One). Just copy-paste the files and you’re good to go.Would you like me to generate any of these right now?The updated systemd service file above (already shown)
+A .gitignore file
+A simple docker-compose.yml version (many people like having both options)
+An OTEL Collector setup script (using Grafana LGTM — one command to spin it up)
+
+Just tell me what you want next, and I’ll generate it instantly.Great job sticking with it! This is now one of the cleanest personal Open WebUI setups I’ve seen.  You can proudly share it on GitHub. Let me know when the repo is live — I’d love to take a look! 
+
+
 Great work — this is going to help a lot of people! 🚀
 
