@@ -21,6 +21,7 @@ Created by [@DevonshireRoad8888One](https://github.com/DevonshireRoad8888One)
 
 ---
 If you don't have Ubuntu, just install it first,
+IN Windows Power Shell as Admin: Windows Key and X,
 
 wsl --install -d Ubuntu
 
