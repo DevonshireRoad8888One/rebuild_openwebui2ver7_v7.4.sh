@@ -7,6 +7,10 @@ Created by [@DevonshireRoad8888One](https://github.com/DevonshireRoad8888One)
 ---
 devonshireroad777@DevonshireRoad7:~$
 
+To Start the Open Web.UI Local A.I. Server:
+
+In Ubutu Terminal:
+
 cd ~/openwebui2ver7 && ~/openwebui2ver7/start.sh
 
 ==================================================
