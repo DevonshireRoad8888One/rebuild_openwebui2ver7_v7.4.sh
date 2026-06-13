@@ -7,6 +7,18 @@ Created by [@DevonshireRoad8888One](https://github.com/DevonshireRoad8888One)
 ---
 devonshireroad777@DevonshireRoad7:~$
 
+
+cd ~/openwebui2ver7 && ~/openwebui2ver7/start.sh
+
+==================================================
+🔒 Starting Open WebUI + OTEL (v7.4)
+==================================================
+🌐 WebUI:   http://127.0.0.1:8000
+🧠 Ollama:  http://127.0.0.1:11437
+📊 OTEL:    http://127.0.0.1:4317
+
+🔄 Starting Ollama...
+🚀 Starting Open WebUI...
 To Start the Open Web.UI Local A.I. Server:
 
 In Ubutu Terminal:
