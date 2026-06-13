@@ -20,6 +20,13 @@ Created by [@DevonshireRoad8888One](https://github.com/DevonshireRoad8888One)
 - Ready for systemd
 
 ---
+If you don't have Ubuntu, just install it first,
+
+wsl --install -d Ubuntu
+
+Make your account and then,
+
+
 
 ## 🚀 Quick Start
 
