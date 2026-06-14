@@ -1,0 +1,103 @@
+# ==========================================================
+# Secure Open WebUI + Ollama Installer v7.4
+# Git Ignore Rules
+# ==========================================================
+
+# Secrets / local configuration
+.env
+.env.*
+!.env.example
+.webui_secret_key
+*.key
+*.pem
+*.crt
+*.cert
+
+# Runtime directories created by the installer
+env1/
+venv/
+.venv/
+data/
+models/
+logs/
+run/
+tmp/
+temp/
+
+# Open WebUI / Ollama runtime data
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+*.db-shm
+*.db-wal
+ollama/
+open-webui/
+uploads/
+cache/
+
+# Logs and PID files
+*.log
+*.pid
+*.out
+*.err
+nohup.out
+
+# Python cache/build files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Docker local files
+docker-data/
+docker-volumes/
+compose.override.yml
+docker-compose.override.yml
+
+# OpenTelemetry / Grafana / Prometheus local data
+otel-data/
+grafana-data/
+prometheus-data/
+tempo-data/
+loki-data/
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Backups / archives
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.rar
+*.bak
+*.backup
+*.old
+
+# Keep useful example/documentation files
+!.env.example
+!README.md
+!LICENSE
+!*.example
+!*.sample
+!docs/
+!systemd/
+!otel/
+!docker/
